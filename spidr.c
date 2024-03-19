@@ -6,7 +6,7 @@
 #define DEFAULT_FREQUENCY_MIN 88e6 // Fréquence minimale en Hz
 #define DEFAULT_FREQUENCY_MAX 108e6 // Fréquence maximale en Hz
 #define DEFAULT_THRESHOLD 25000    // Seuil de détection du signal
-#define DEFAULT_GAIN 49            // Gain RF en dB (entier)
+#define DEFAULT_GAIN 49.6            // Gain RF en dB (entier)
 
 int main() {
     int i, ret;
@@ -18,7 +18,7 @@ int main() {
     int16_t *samples = NULL;
     uint32_t length = 0;
     uint32_t threshold = DEFAULT_THRESHOLD;
-    int gain = DEFAULT_GAIN;
+    double gain = DEFAULT_GAIN;
     uint32_t step_size = 1e6; // Pas de balayage en Hz
 
     // Initialize device
